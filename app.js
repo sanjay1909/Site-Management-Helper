@@ -55,30 +55,27 @@ var Menu = React.createClass({displayName: "Menu",
            items: []
          }
     },
-    jsonRequest: function (callback) {
+    jsonRequest: function (jsonURL,callback) {
 
         var xobj = new XMLHttpRequest();
         xobj.overrideMimeType("application/json");
-        xobj.open('GET', 'sustainability.json', true); //
+        xobj.open('GET', jsonURL, true); //
         xobj.onreadystatechange = function () {
             if (xobj.readyState == 4 && xobj.status == "200") {
-                // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
                 callback(xobj.responseText);
             }
         };
         xobj.send(null);
     },
-    loadJSON: function () {
-        this.jsonRequest(function (response) {
-            // Parse JSON string into object
+    loadJSON: function (jsonURL) {
+        this.jsonRequest(jsonURL,function (response) {
             var actual_JSON = JSON.parse(response);
-            console.log(actual_JSON);
             this.setState({items: actual_JSON.items})
         }.bind(this));
     },
 
     componentDidMount: function() {
-        this.loadJSON();
+        this.loadJSON('sustainability.json');
     },
 
     render: function(){
