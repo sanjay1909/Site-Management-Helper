@@ -19,10 +19,8 @@ var SectionLink = React.createClass({displayName: "SectionLink",
     }
         return (
         React.createElement("div", null, React.createElement("b", null, React.createElement("i", null, this.props.title)),
-                contentLink,
-                React.createElement("a", {href: this.props.instructions, target: "_blank"}, "[Instructions] "),
-                React.createElement("a", {href: this.props.filesLink, target: "_blank"}, "[Files] "),
-               templateLink
+                React.createElement("a", {href: this.props.instructions, target: "_blank"}, "[Instructions & Contents] "),
+                React.createElement("a", {href: this.props.filesLink, target: "_blank"}, "[Files] ")
             )
         )
     }
@@ -99,8 +97,7 @@ getInitialState: function(){
                 {title:"Water", CL:"", TL:"" ,GL:"https://docs.google.com/document/d/1Tbjkfae00rLQtoSAP483S9xgCgrdVFPY2h_MU5z-RZ0/edit?usp=sharing", FL:"https://drive.google.com/open?id=0By6n6D7KyxUafnkxUjh0NUllZ09rVEVYR0FqdWt2ZnpMOGFHUm5BYmJLZ0JxVk9wcjI3RUk" ,items: []}
         ]},
         {title:"News & Events", CL:"", TL:"" ,GL:"https://docs.google.com/document/d/1I9hFZBZUQLwtGM4bVqfGzdd55JMOW0hTE2lD3fKjnd4/edit?usp=sharing", FL:"https://drive.google.com/open?id=0By6n6D7KyxUafm9oWWF3NzdkeWNyX1VzTUNnaWdpM3ZabkZPNzhGVV9VNTNtUnBmMzdPZzg" ,items: []},
-        {title:"Awards & Recognitions", CL:"http://www.uml.edu/Sustainability/Recognition.aspx", TL:"" ,GL:"https://docs.google.com/document/d/19mzUS-ps8d4n5kLErLUK3Eqqkrjyr8SUw-43jhQSv-0/edit?usp=sharing", FL:"https://drive.google.com/open?id=0By6n6D7KyxUafkJnbGdpN0htbDF6eWthazd1N2ttLTExTWxYeS1Zb2RVTER4aUhxNG15NVk" ,items: []},
-        {title:"Contact & Connect", CL:"http://www.uml.edu/Sustainability/Contact-Us.aspx", TL:"" ,GL:"https://docs.google.com/document/d/1ZM8yB6sKEoD-py4aQYfTZodBnql33xmpO0wRM-rRS4Q/edit?usp=sharing", FL:"https://drive.google.com/open?id=0By6n6D7KyxUafmtudEl1aHpMUW9yMmFHMXhSN3poNE9zQm1oM0FrQWNPczIwYlZoWmRmU1U" ,items: []}
+        {title:"Awards & Recognitions", CL:"http://www.uml.edu/Sustainability/Recognition.aspx", TL:"" ,GL:"https://docs.google.com/document/d/19mzUS-ps8d4n5kLErLUK3Eqqkrjyr8SUw-43jhQSv-0/edit?usp=sharing", FL:"https://drive.google.com/open?id=0By6n6D7KyxUafkJnbGdpN0htbDF6eWthazd1N2ttLTExTWxYeS1Zb2RVTER4aUhxNG15NVk" ,items: []}
 
        ]
      }
